@@ -1,0 +1,124 @@
+@import "_variables"
+
+html *, body *
+	box-sixing: border-box
+
+header.site-header
+	nav.site-main
+		position: fixed
+		z-index: 2
+		width: 100%
+		background: black
+		height: 50px
+		display: flex
+		@media media_max_md
+			justify-content: center;
+		&>*
+			line-height: 50px
+		button.menu-btn
+			color: white;
+			font-size: 1.4em;
+			width: 50px;
+			height: 50px;
+			padding: 0;
+			border: none;
+			position: absolute;
+			left: 0;
+			@media media_md 
+				display: none
+		button.logo 
+			background: url(wing_bg) no-repeat center center
+			padding: 0
+			margin: 0 .8em 0 0
+			border: none
+			width: 50px
+			height: 50px
+			svg 
+				padding: 10px
+				width: 30px
+				height: 30px
+				fill: white 
+		h1
+			margin-right: 2em
+
+		ul
+			list-style-type: none
+			display: flex
+			li
+				@media media_md
+					height: 100%
+				padding: 0 1em
+				&.selected
+					background: darken(red, 30%)
+
+			@media media_max_md
+				position: fixed
+				height: 100%
+				width: 200px
+				background: black
+				box-shadow: 0 0px 10px #666
+				top: 0
+				left: -200px;
+				display: block;
+				transform: translateX(0)
+				transition: transform 200ms ease-in-out
+				&.active
+					transform: translateX(200px)
+
+	h1
+		color: red
+		font-size: 1.4em
+		fone-weight: 200
+		text-align: center
+		display: flex
+		letter-spacing: 1px;
+		.title-one
+			color: white
+
+
+body > main
+	padding: 50px 0 8em 0
+
+body > footer
+	position:    fixed
+	bottom:      0
+	width:       100%
+	display:     flex
+	align-items: center
+
+	color:      red
+	background: black
+	//box-shadow: 0 -5px 10px #666
+	font-size:  0.8em
+
+	@media media_max_md
+		section.attribution
+			display: none;
+
+	section
+		padding:     0 1em
+		flex-grow:   1
+		white-space: nowrap
+		&.social
+			text-align: right
+
+	a
+		text-decoration: none
+
+	ul
+		margin:          0
+		padding:         0
+		list-style-type: none
+
+		li
+			min-width: 2.2em
+			margin:    .5em 0
+			display:   inline-block
+
+			abbr
+				font-family: 'JustVector'
+				font-size:   2em
+				display:     inline-block
+				border:      none !important
+
+ 
